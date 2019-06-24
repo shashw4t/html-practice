@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parks and Recreation Character Guide</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        background-color: beige;
+    }
+
+    .bigButton {
+        font-size: 16px;
+    }
+
+    #description {
+        margin: 4px;
+    }
+</style>
+
+<script>
+    function toggle(name) {
+        var temp = document.getElementById(name);
+        if (temp.style.display === "none") {
+            temp.style.display = "block";
+        }
+        else {
+            temp.style.display = "none";
+        }
+    }
+</script>
+
+<body>
+    <h1>Parks and Recreation Character Guide</h1>
+    <div id="description">
+        <p>This guide contains details and pictures of a few select characters from the TV show
+            <em>Parks and Recreation</em>. Click the corresponding button to show and hide the characters.</p>
+    </div>
+    <div id="buttons">
+        <input type="button" id="Leslie-Button" class="bigButton" value="Leslie Knope" onclick="toggle(this.value)">
+        <input type="button" id="Ann-Button" class="bigButton" value="Ann Perkins" onclick="toggle(this.value)">
+        <input type="button" id="Tom-Button" class="bigButton" value="Tom Haverford" onclick="toggle(this.value)">
+        <input type="button" id="Ron-Button" class="bigButton" value="Ron Swanson" onclick="toggle(this.value)">
+        <input type="button" id="April-Button" class="bigButton" value="April Ludgate" onclick="toggle(this.value)">
+        <input type="button" id="Andy-Button" class="bigButton" value="Andy Dwyer" onclick="toggle(this.value)">
+    </div>
+
+    <div id="characters">
+        <section id="Leslie Knope" style="display: none">
+            <h2>Leslie Knope</h2>
+            <p>Leslie Knope is the deputy director of the Pawnee Parks and Recreation Department, and the protagonist of Parks
+                and Recreation.</p>
+            <p>Leslie is a passionate, hard-working and ambitious woman who loves her hometown of Pawnee and, unlike many around
+                her, has not lost her optimism in the face of government bureaucracy.</p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Amy_Poehler_%288894155873%29_%28cropped%29.jpg" width="300"
+                    height="350">
+                <figcaption>Leslie Knope is played by Amy Poehler</figcaption>
+            </figure>
+        </section>
+        <section id="Ann Perkins" style="display: none">
+            <h2>Ann Perkins</h2>
+            <p>Ann Perkins, Leslie's best friend, is a nurse who eventually takes a part-time position with Pawnee's department
+                of public health.</p>
+            <p>Ann and Leslie meet after Ann requests at a town meeting that an abandoned construction pit be filled, and Leslie
+                pushes to have it turned into a park.</p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Rashida_Jones_at_2017_MIFF.jpg" width="300" height="350">
+                <figcaption>Ann Perkins is played by Rashida Jones</figcaption>
+            </figure>
+        </section>
+        <section id="Tom Haverford" style="display: none">
+            <h2>Tom Haverford</h2>
+            <p>Tom was Leslie's immediate subordinate on the parks department and the two would often work together on tasks.
+            </p>
+            <p>The sarcastic Tom seemed to care little for his mid-level government job and seldom showed any initiative or
+                work ethic. </p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Aziz_Ansari_2012_Shankbone.JPG" width="300" height="350">
+                <figcaption>Tom Haverford is played by Aziz Ansari</figcaption>
+            </figure>
+        </section>
+        <section id="Ron Swanson" style="display: none">
+            <h2>Ron Swanson</h2>
+            <p>Ron Swanson is the parks and recreation director, although he allows Leslie to do almost all the real work in
+                the department.</p>
+            <p> Despite working in a government job, Ron is a steadfast libertarian who believes in as little government as possible
+                and feels the parks department should not even run or maintain parks</p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Nick_Offerman_at_UMBC_%28cropped%29.jpg" width="300" height="350">
+                <figcaption>Ron Swanson is played by Nick Offerman</figcaption>
+            </figure>
+        </section>
+        <section id="April Ludgate" style="display: none">
+            <h2>April Ludgate</h2>
+            <p>April Ludgate is the extremely sarcastic, apathetic and goth-like college student who started the show working
+                as an intern in the parks and recreation department.</p>
+            <p>She always speaks in a deadpan and uninterested tone of voice, often making dry comments or mocking those around
+                her, and expresses little interest in her job.</p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Aubrey_Plaza_2012_Shankbone.JPG" width="300" height="350">
+                <figcaption>April Ludgate is played by Aubrey Plaza</figcaption>
+            </figure>
+        </section>
+        <section id="Andy Dwyer" style="display: none">
+            <h2>Andy Dwyer</h2>
+            <p>Andy Dwyer is a goofy and dim-witted but lovable slacker who works as a shoeshiner at Pawnee city hall.</p>
+            <p>He was dating Ann at the start of the show.</p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Chris_Pratt_by_Gage_Skidmore_2.jpg" width="300" height="350">
+                <figcaption>Andy Dwyer is played by Chris Pratt</figcaption>
+            </figure>
+        </section>
+    </div>
+</body>
+
+<footer>Spoiler Free!</footer>
+
+</html>
