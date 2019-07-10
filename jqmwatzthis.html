@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <title> WatzThis.com Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>
+  $(document).bind('mobileinit',function(){
+    $.mobile.pushStateEnabled = false;
+  });
+  </script>
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="watzthis.css">
+</head>
+<body>
+<div data-role="page" id="chapter1" data-theme="b">
+  <header data-role="header">
+    <h1>How to use WatzThis</h1>
+ </header>
+ <section data-role="content">
+      <h2>Chapter 1: The Buttons</h2>
+      <p>WatzThis has several buttons. Each has a different function. The following figure shows the buttons.</p>
+      <figure>
+      <img src="http://www.watzthis.com/images/buttons.png" alt="Here are the buttons">
+      <figcaption>You can see the buttons here.</figcaption>
+      </figure>
+</section>
+      <footer data-role="footer" data-position="fixed">
+  <p>created by WatzThis Enterprises</p>
+  <div data-role="navbar" data-id="watzthisnav">
+    <ul>
+      <li><a href="#chapter1">Chapter 1</a></li>
+      <li><a href="#chapter2">Chapter 2</a></li>
+      <li><a href="#chapter3">Chapter 3</a></li>
+    </ul>
+    </div>
+  </footer>
+</div>
+<div data-role="page" id="chapter2" data-theme="b">
+  <header data-role="header">
+    <h1>How to use WatzThis</h1>
+  </header>
+<section data-role="content">
+      <h2>Chapter 2: The Lights</h2>
+      <p>WatzThis has colors. They change when you press different buttons.</p>
+</section>
+  <footer data-role="footer" data-position="fixed">
+  <p>created by WatzThis Enterprises</p>
+  <div data-role="navbar" data-id="watzthisnav">
+    <ul>
+      <li><a href="#chapter1">Chapter 1</a></li>
+      <li><a href="#chapter2">Chapter 2</a></li>
+      <li><a href="#chapter3">Chapter 3</a></li>
+    </ul>
+    </div>
+  </footer>
+</div>
+    <div data-role="page" id="chapter3" data-theme="b">
+  <header data-role="header">
+    <h1>How to use WatzThis</h1>
+  </header>
+<section data-role="content">
+      <h2>Chapter 3: "Auto" Mode</h2>
+      <p>WatzThis has an automatic mode that's useful for those times when you're doing something else, such as dancing, but would still like to have changing colors on your mobile device.</p>
+</section>
+  <footer data-role="footer" data-position="fixed">
+  <p>created by WatzThis Enterprises</p>
+
+  <div data-role="navbar" data-id="watzthisnav">
+    <ul>
+      <li><a href="#chapter1">Chapter 1</a></li>
+      <li><a href="#chapter2">Chapter 2</a></li>
+      <li><a href="#chapter3">Chapter 3</a></li>
+    </ul>
+    </div>
+
+  </footer>
+</div>
+</body>
+</html>
