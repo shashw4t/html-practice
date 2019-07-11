@@ -1,90 +1,115 @@
+<!DOCTYPE html>
+<html>
 
-<!DOCTYPE html>  
-<html> 
-<head>    
-<meta name="HandheldFriendly" content="True">   
-<meta name="MobileOptimized" content="320"/>   
-<meta name="viewport" content="width=device-width, initial-scale=1.0">        
-<meta name="apple-mobile-web-app-capable" content="yes">   
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
-<title>WatzThis?</title>  
-<script> 
-var light = new Array(); 
-var t; 
-var color=0; 
-var flipping=0; 
-var speed=1000;  
-light[0] = "black"; 
-light[1] = "white"; 
-light[2] = "red"; 
-light[3] = "blue"; 
-light[4] = "green"; 
-light[5] = "orange";  
-function flip(whichway){   
-    document.body.style.backgroundColor = light[whichway];
-    stopFlip(); 
-}      
-function autoFlip() { 
-    document.body.style.backgroundColor = light[color]; 
-    if (color < light.length-1) {         
-      color++;     
-    } else {         
-      color=0;     
-    }     
-t = setTimeout("autoFlip(speed)",speed); 
-} 
-function doAutoFlip(changespeed){     
-  if (!flipping){         
-    flipping=1;
-    speed=changespeed;
-    autoFlip();     
-  }    
-} 
-function stopFlip() {     
-  clearTimeout(t);     
-  flipping=0; 
-} 
-</script>
+<head>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<style>
-body {
-    font-family:arial, helvetica;
-    text-align: center;
-}
-#container {}
-#directions, #flashlight, #danceparty {
-    margin:4px;
-}
-ol {
-    display: inline-block;
-    margin: 0 auto;
-    text-align:left;
-}
-.bigButton {
-    font-size:18px;
-}
-</style>
+  <title>WatzThis?</title>
+  <script>
+    var light = new Array();
+    var t;
+    var color = 0;
+    var flipping = 0;
+    var speed = 1000;
+    light[0] = "black";
+    light[1] = "white";
+    light[2] = "red";
+    light[3] = "blue";
+    light[4] = "green";
+    light[5] = "orange";
+    function flip(whichway) {
+      document.body.style.backgroundColor = light[whichway];
+      stopFlip();
+    }
+    function autoFlip() {
+      document.body.style.backgroundColor = light[color];
+      if (color < light.length - 1) {
+        color++;
+      } else {
+        color = 0;
+      }
+      t = setTimeout("autoFlip(speed)", speed);
+    }
+    function doAutoFlip(changespeed) {
+      if (!flipping) {
+        flipping = 1;
+        speed = changespeed;
+        autoFlip();
+      }
+    }
+    function stopFlip() {
+      clearTimeout(t);
+      flipping = 0;
+    }
+    function getLoc() {
 
-</head> 
+      var gps = navigator.geolocation.getCurrentPosition
+        (
+          function (position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Your Latitude is: " + latitude + " and your longitude is: " + longitude + "! Have fun!");
+          }
+        );
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: arial, helvetica;
+      text-align: center;
+    }
+
+    #container {}
+
+    #directions,
+    #flashlight,
+    #danceparty {
+      margin: 4px;
+    }
+
+    ol {
+      display: inline-block;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .bigButton {
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+
 <body>
-<h1>WatzThis?</h1>
-<div id="directions">
-<ol>
-  <li>Use the top row of buttons to turn the flashlight on or off, or to make the light red.</li>
-  <li>Use the 2nd row of buttons to turn on and off your automatic flashing color light dance party.</li>
-</ol>
-</div>
-<div id="container">
-<div id="flashlight">
-<input type="button" id="OFF" class="bigButton" value="OFF" onclick="flip(0);"> 
-<input type="button" id="ON" class="bigButton" value="ON" onclick="flip(1);"> 
-<input type="button" id="RED" class="bigButton" value="RED" onclick="flip(2);">     
-</div> 
-<div id="danceparty"> 
-<input type="button" id="AUTO" class="bigButton" value="AUTO" onclick="doAutoFlip(500);"> 
-<input type="button" id="STOP" class="bigButton" value="STOP" onclick="stopFlip();"> 
-</div>     
-</div>
-</body> 
-</html> 
+  <h1>WatzThis?</h1>
+  <div id="directions">
+    <ol>
+      <li>Use the top row of buttons to turn the flashlight on or off, or to make the light red.</li>
+      <li>Use the 2nd row of buttons to turn on and off your automatic flashing color light dance party.</li>
+    </ol>
+  </div>
+  <div id="container">
+
+      <object width="100%" height="100px" data="animated_ghost.svg" type="image/svg+xml"></object>
+
+    <div id="flashlight">
+      <input type="button" id="OFF" class="bigButton" value="OFF" onclick="flip(0);">
+      <input type="button" id="ON" class="bigButton" value="ON" onclick="flip(1);">
+      <input type="button" id="RED" class="bigButton" value="RED" onclick="flip(2);">
+    </div>
+    <div id="danceparty">
+      <input type="button" id="AUTO" class="bigButton" value="AUTO" onclick="doAutoFlip(500);">
+      <input type="button" id="STOP" class="bigButton" value="STOP" onclick="stopFlip();">
+    </div>
+    <div id="geolocation">
+      <input type="button" id="latlong" class="bigButton" value="GET LOC" onclick="getLoc();">
+    </div>
+  </div>
+</body>
+
+</html>
