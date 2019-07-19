@@ -12,6 +12,35 @@
 <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+ <script type="text/javascript" charset="utf-8">
+
+ // Wait for device API libraries to load
+ // 
+ 
+ document.addEventListener("deviceready", onDeviceReady, false);
+
+ // device APIs are available
+ //
+   function onDeviceReady() {
+      navigator.compass.getCurrentHeading(onSuccess, onError);
+ }
+ 
+ // onSuccess: Get the current heading
+ //
+ function onSuccess(heading) {
+     alert('Your phone compass readout is: ' + heading.magneticHeading);
+ }
+     
+ // onError: Failed to get the heading
+ //
+ function onError(compassError) {
+     alert('Compass Error: ' + compassError.code);
+ }
+         
+</script>
 </head>
 
 <body style="margin: 0px; padding: 0px;">
