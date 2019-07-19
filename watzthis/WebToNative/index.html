@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>WatzThis?</title>
+
+
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body style="margin: 0px; padding: 0px;">
+<div id="container">
+<div id="top">
+<img src="includes/WatzThis-logo.png" width="300px">
+</div>
+<div id="middle">
+
+<div id="flashlight">
+<input type="button" id="OFF" class="bigButton" value="OFF" onclick="flip(0);"> 
+<input type="button" id="ON" class="bigButton" value="ON" onclick="flip(1);"> 
+<input type="button" id="RED" class="bigButton" value="RED" onclick="flip(2);">     
+</div> 
+<div id="danceparty"> 
+<input type="button" id="AUTO" class="bigButton" value="AUTO" onclick="doAutoFlip(500);"> 
+<input type="button" id="STOP" class="bigButton" value="STOP" onclick="stopFlip();"> 
+</div>
+<div id="geolocation"> 
+<input type="button" id="latlong" class="bigButton" value="GET LOC" onclick="getLoc();"> 
+</div>
+</div>
+<div id="bottom">
+<div style="margin-top:20px">
+	<a href="docs.html"><img src="includes/whatswatzthis.png" width="200"></a>
+</div>
+<div id="map_canvas"
+	style="width: 100%; height: 100%; float: left; border: 1px solid black;">
+</div>
+</div>
+</div>
+<script src="includes/index.js"></script>
+</body>
+</html>

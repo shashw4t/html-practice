@@ -1,0 +1,12 @@
+body {
+  font-family:arial, helvetica;
+  text-align: center;
+  }
+ol {
+    display: inline-block;
+    margin: 0 auto;
+    text-align:left;
+}
+.bigButton {
+    font-size:18px;
+}

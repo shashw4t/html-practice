@@ -1,0 +1,9 @@
+#middle {
+  background:url("bigback.png");
+}
+#directions, #flashlight, #danceparty {
+    margin:4px;
+}
+#container {
+  margin-top: 10px;
+}
